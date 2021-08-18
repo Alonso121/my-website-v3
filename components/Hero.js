@@ -42,7 +42,7 @@ const Hero = () => {
             Welcome to my website!
           </h2>
         </div>
-        <div data-aos="zoom-in" className="w-60 md:w-3/5 xl:-mt-16">
+        <div data-aos="zoom-in" className="w-60 md:w-80 lg:w-3/5 xl:-mt-16">
           <Image
             className="rounded-full dark:remove-colors"
             priority

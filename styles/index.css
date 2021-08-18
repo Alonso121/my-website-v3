@@ -12,13 +12,6 @@
   .link-underline {
     @apply relative before:absolute before:bottom-[-5px] before:h-[5px] before:w-[0] hover:before:w-full before:mt-[5px] before:bg-white md:before:bg-primary before:transition-all before:duration-300;
   }
-  .toggle-checkbox:checked {
-    right: 0;
-    border-color: var(--primary);
-  }
-  .toggle-checkbox:checked + .toggle-label {
-    background-color: var(--hv-color);
-  }
 }
 
 .active::before {

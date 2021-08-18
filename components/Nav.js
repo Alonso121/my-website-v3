@@ -43,12 +43,13 @@ const Nav = () => {
           );
         })}
         <a
-          href="/AlisonTahiriCV.pdf"
+          href="/alison-tahiri-resume.pdf"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
+          aria-label="link to my resume"
           className="font-semibold transition-colors duration-300 cursor-pointer text-text hover:text-primary"
         >
-          Resume
+          CV
         </a>
       </div>
       {/* Links screen < 768px */}
@@ -75,10 +76,12 @@ const Nav = () => {
             </LinkS>
           );
         })}
+
         <a
-          href="/AlisonTahiriCV.pdf"
+          href="/alison-tahiri-resume.pdf"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
+          aria-label="link to my resume"
           className="font-bold text-white transition-colors duration-300 cursor-pointer"
         >
           CV

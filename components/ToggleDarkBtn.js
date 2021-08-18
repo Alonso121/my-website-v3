@@ -11,13 +11,13 @@ const ToggleDarkBtn = ({ theme, setTheme }) => {
           type="checkbox"
           name="toggle"
           id="toggle"
-          value={theme}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="absolute block w-6 h-6 bg-gray-200 border-4 rounded-full appearance-none cursor-pointer border-primary toggle-checkbox"
+          className="absolute block w-6 h-6 bg-gray-200 border-4 rounded-full appearance-none cursor-pointer border-primary dark:right-0"
         />
         <label
           htmlFor="toggle"
-          className="block h-6 overflow-hidden rounded-full cursor-pointer bg-hv toggle-label"
+          aria-label="toggle-dark-mode"
+          className="block h-6 overflow-hidden rounded-full cursor-pointer bg-hv "
         />
       </div>
       <IoMoonSharp className="w-5 h-5 ml-0.5 text-text" />
