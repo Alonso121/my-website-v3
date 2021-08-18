@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link as LinkS, animateScroll as scroll } from "react-scroll";
+import React, { useState } from "react";
+import Link from "next/link";
+import { Link as LinkS } from "react-scroll";
 import { useTheme } from "next-themes";
 
 import { navLinks } from "../lib/data";
@@ -9,19 +10,14 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
-
   return (
     <nav className="fixed z-30 flex items-center justify-between w-full h-16 px-6 bg-customlight dark:bg-darkgray">
       {/* Logo */}
-      <div
-        className="text-2xl transition-all duration-300 cursor-pointer lg:link-underline text-text hover:text-primary"
-        onClick={toggleHome}
-      >
-        Alison Tahiri
-      </div>
+      <Link href="/">
+        <div className="text-2xl transition-all duration-300 cursor-pointer lg:link-underline text-text hover:text-primary">
+          Alison Tahiri
+        </div>
+      </Link>
 
       <ToggleDarkBtn theme={theme} setTheme={setTheme} />
 
@@ -45,7 +41,7 @@ const Nav = () => {
         <a
           href="/alison-tahiri-resume.pdf"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
           aria-label="link to my resume"
           className="font-semibold transition-colors duration-300 cursor-pointer text-text hover:text-primary"
         >
@@ -80,7 +76,7 @@ const Nav = () => {
         <a
           href="/alison-tahiri-resume.pdf"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
           aria-label="link to my resume"
           className="font-bold text-white transition-colors duration-300 cursor-pointer"
         >
