@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { Link as LinkS, animateScroll as scroll } from "react-scroll";
 import { useTheme } from "next-themes";
-import { GiStarSwirl } from "react-icons/gi";
-import { GiSun } from "react-icons/gi";
 
 import { navLinks } from "../lib/data";
+import ToggleDarkBtn from "./ToggleDarkBtn";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -18,24 +16,15 @@ const Nav = () => {
   return (
     <nav className="fixed z-30 flex items-center justify-between w-full h-16 px-6 bg-customlight dark:bg-darkgray">
       {/* Logo */}
-      <div className="flex items-center">
-        <div
-          className="text-2xl transition-all duration-300 cursor-pointer lg:link-underline text-text hover:text-primary"
-          onClick={toggleHome}
-        >
-          Alison Tahiri
-        </div>
-        <div
-          className="z-50 ml-3 text-3xl text-primary"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
-          {theme === "dark" ? (
-            <GiSun className="w-10 h-10 transition-colors duration-300 cursor-pointer hover:text-hv " />
-          ) : (
-            <GiStarSwirl className="w-10 h-10 transition-colors duration-300 cursor-pointer hover:text-hv " />
-          )}
-        </div>
+      <div
+        className="text-2xl transition-all duration-300 cursor-pointer lg:link-underline text-text hover:text-primary"
+        onClick={toggleHome}
+      >
+        Alison Tahiri
       </div>
+
+      <ToggleDarkBtn theme={theme} setTheme={setTheme} />
+
       {/* Links screen > 768px */}
       <div className="hidden space-x-3 text-xl md:flex text-text">
         {navLinks.map((link) => {
@@ -57,9 +46,9 @@ const Nav = () => {
           href="/AlisonTahiriCV.pdf"
           target="_blank"
           rel="noopener"
-          className="font-bold transition-colors duration-300 cursor-pointer text-text hover:text-primary"
+          className="font-semibold transition-colors duration-300 cursor-pointer text-text hover:text-primary"
         >
-          CV
+          Resume
         </a>
       </div>
       {/* Links screen < 768px */}

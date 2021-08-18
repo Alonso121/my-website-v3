@@ -6,7 +6,7 @@ import { RiStarSLine } from "react-icons/ri";
 const LangCase = ({ lang, title, aosDirection, aosDelay }) => {
   const renderStars = (amount) =>
     Array.apply(null, { length: 5 }).map((_, i) => (
-      <span className="fill-current star text-primary" key={i}>
+      <span className="fill-current text-primary" key={i}>
         {i < amount ? <RiStarSFill /> : <RiStarSLine />}
       </span>
     ));
