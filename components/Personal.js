@@ -1,17 +1,11 @@
-import React, { useRef } from "react";
 import Image from "next/image";
 import LangCase from "./LangCase";
 
 const Personal = ({ langData, techData }) => {
-  const personalRef = useRef(null);
-  const age = Math.floor(
-    (new Date() - new Date("1988-06-01").getTime()) / 3.15576e10
-  );
   return (
     <section
       id="personal"
       className="py-6 min-h-screen-2rem bg-customlight dark:bg-darkgray"
-      ref={personalRef}
     >
       <div className="container grid items-center content-center mx-auto md:gap-10 md:px-4 xl:grid-cols-2">
         <div className="hidden lg:block">
@@ -34,9 +28,8 @@ const Personal = ({ langData, techData }) => {
               Personal Information
             </h2>
             <p className="mb-4">
-              Hi, I&apos;m Alison. I&apos;m {age} years old, living in Tirana.
-              <br></br>
-              I&apos;m a Frontend Developer, currently working as a freelancer.
+              Hi, I&apos;m Alison. I&apos;m a Frontend Developer from Tirana,
+              currently working as a freelancer.
             </p>
             <p className="mb-4">
               I’ve studied Business Management at SUNY (Empire State College). I

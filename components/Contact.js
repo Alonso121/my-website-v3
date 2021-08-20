@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const Contact = () => {
   const [formResult, setFormResult] = useState("");
-  const contactRef = useRef(null);
   const submitForm = (ev) => {
     ev.preventDefault();
     const form = ev.target;
@@ -24,11 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      ref={contactRef}
-      className="bg-customlight dark:bg-darkgray text-text"
-    >
+    <section id="contact" className="bg-customlight dark:bg-darkgray text-text">
       <div className="container grid content-center mx-auto 3xl:max-w-none lg:grid-cols-2 min-h-screen-incl-footer">
         <div data-aos="flip-right" className="hidden p-6 lg:block">
           <Image

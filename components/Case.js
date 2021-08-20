@@ -14,7 +14,7 @@ export default function Case({
     <div
       data-aos="fade-up"
       data-aos-delay={aosDelay}
-      className="p-6 transition ease-in-out rounded-lg group shadow-case hover:shadow-case-hover transition-duration-300 dark:bg-darkgray text-text"
+      className="p-6 transition-all duration-300 ease-in-out rounded-lg group shadow-case hover:shadow-case-hover dark:bg-darkgray text-text"
     >
       <div className="h-full">
         <a

@@ -1,15 +1,8 @@
-import React, { useRef } from "react";
-
 import Case from "./Case";
 
 const Projects = ({ projectsData }) => {
-  const portfolioRef = useRef(null);
   return (
-    <section
-      id="portfolio"
-      ref={portfolioRef}
-      className="dark:bg-lightgray text-text"
-    >
+    <section id="portfolio" className="dark:bg-lightgray text-text">
       <div className="container items-center content-center py-12 mx-auto min-h-screen-2rem">
         <h2
           data-aos="fade-up"
