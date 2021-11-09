@@ -14,26 +14,26 @@ export default function Case({
     <div
       data-aos="fade-up"
       data-aos-delay={aosDelay}
-      className="p-6 transition-all duration-300 ease-in-out rounded-lg group shadow-case hover:shadow-case-hover dark:bg-darkgray text-text"
+      className="h-96  ease-in-out rounded-lg group shadow-case hover:shadow-case-hover bg-gray-100  overflow-hidden"
     >
-      <div className="h-full">
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col h-full"
+          className="flex h-full items-end mt-2"
           href={url}
         >
-          <div className="h-40 mx-auto mb-4 overflow-hidden rounded-lg w-44 filter 2xl:dark:grayscale-100 dark:group-hover:filter-none">
+          <div className="absolute mt-2 w-full h-full  z-20">
             <Image
               placeholder="blur"
               blurDataURL={src}
-              width={logoWidth}
-              height={180}
+              layout="fill"
+              objectFit="scale-down"
+              objectPosition="top"
               alt={`Logo ${logoAlt}`}
               src={src}
             />
           </div>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col w-full justify-center z-30 p-2 bg-gray-100 bg-opacity-90 text-gray-800">
             {content}
             <ul className="flex flex-wrap 2xl:dark:grayscale-100 dark:group-hover:filter-none">
               {tags.map((tag, i) => (
@@ -47,7 +47,6 @@ export default function Case({
             </ul>
           </div>
         </a>
-      </div>
     </div>
   );
 }
